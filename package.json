@@ -1,0 +1,27 @@
+{
+  "name": "webforge-js-components",
+  "version": "0.1.0",
+  "description": "",
+  "homepage": "https://github.com/webforge/js-components",
+  "bugs": "https://github.com/webforge/js-components/issues",
+  "author": {
+    "name": "Philipp Scheit",
+    "email": "p.scheit@ps-webforge.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webforge/js-components"
+  },
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    
+  ],
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}
