@@ -1,6 +1,6 @@
 {
   "name": "webforge-js-components",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "",
   "homepage": "https://github.com/webforge/js-components",
   "bugs": "https://github.com/webforge/js-components/issues",
@@ -16,10 +16,11 @@
   "files": [
     "lib"
   ],
-  "keywords": [
-    
-  ],
+  "keywords": [],
   "devDependencies": {
+    "matchdep": "~0.3.0",
+    "grunt": "~0.4.5",
+    "grunt-release": "~0.7.0"
   },
   "scripts": {
     "test": "grunt test"
