@@ -71,10 +71,12 @@ define(['KnockoutSync/EntityManager', 'KnockoutSync/Backend', 'KnockoutSync/Enti
       });
     };
 
-    sync.remove = function(entity) {
+    sync.remove = function(entity, successCallback) {
       sync.backend.remove(entity, function(error) {
         if (error) {
           amplify.publish('sync.error', error, ['sync.remove('+entity.fqn+')']);
+        } else if (successCallback) {
+          successCallback.call(sync);
         }
       });
     };
