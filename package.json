@@ -14,6 +14,10 @@
   },
   "license": "MIT",
   "keywords": [],
+  "dependencies": {
+    "shimney-lodash": "*",
+    "shimney-knockout": "*"
+  },
   "devDependencies": {
     "matchdep": "~0.3.0",
     "grunt": "~0.4.5",
