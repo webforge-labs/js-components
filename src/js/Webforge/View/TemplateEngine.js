@@ -16,7 +16,8 @@ define(function() {
         throw new Error('The template with name '+templateName+' cannot be found.');
       }
 
-      return templates[templateName](variables);
+      // render for grunt-contrib-hogan  no render for grunt-hogan
+      return templates[templateName].render(variables, templates);
     };
   };
 
