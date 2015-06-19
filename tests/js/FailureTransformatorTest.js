@@ -41,7 +41,19 @@ describe('FailureTransformator', function () {
       var failure = transformator.fromWebforgeBackend(validationFailure);
 
       expect(failure).to.be.ok;
+      expect(failure.hasValidation()).to.be.true;
 
+      var fieldErrors;
+      expect(fieldErrors = failure.getFieldErrors()).to.be.a('array');
+
+      expect(fieldErrors).to.have.length(2);
+      expect(fieldErrors).to.have.property(0);
+      expect(fieldErrors).to.have.property(1);
+
+      expect(fieldErrors[0].messagesHTML()).to.contain("gib eine korrekte E-Mail-Adresse");
+      expect(fieldErrors[1].messagesHTML()).to.contain("gib deinen Namen an");
+
+      done();
     });
   });
 

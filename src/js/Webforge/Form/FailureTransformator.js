@@ -4,7 +4,15 @@ define(['lodash', './Failure', 'JSON'], function(_, DisplayFailure, globalJSON) 
     var that = this;
 
     this.fromWebforgeBackend = function(failure) {
+      if (failure.validation) {
+        return new DisplayFailure({
+          message: "Die Daten konnten nicht gespeichert werden, da ein Validierungsfehler aufgetreten ist.",
+          suggestion: "Überprüfe bitte deine Daten nach Fehlern und versuche es erneut.",
+          validation: failure.validation
+        });
+      }
 
+      return that.fromGeneric(failure);
     };
 
     this.fromKOSyncBackend = function(failure) {
