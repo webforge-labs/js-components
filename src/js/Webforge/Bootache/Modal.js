@@ -7,6 +7,7 @@ define(['knockout', 'modules/templateEngine', 'jquery', 'bootstrap/modal'], func
       closeButton: true,
       saveButton: false,
       templateName: 'CMS/'+params.name+'-edit-form.html',
+      size: 'lg', // sm, md
       withBinding: null,
       saveBinding: '$root.list.control.save', // this needs to be absolute (beginning with root, because the modal will be in body - until you binded body in main)
       label: params.headlineSingular+' bearbeiten'
@@ -44,7 +45,7 @@ define(['knockout', 'modules/templateEngine', 'jquery', 'bootstrap/modal'], func
       {
         id: params.name+'-edit',
         label: i18n.modal.label,
-        size: 'lg',
+        size: params.size,
         body: templateEngine.render(
           params.templateName, 
           {
