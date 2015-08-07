@@ -4,6 +4,7 @@ define(['knockout', 'modules/templateEngine', 'jquery', 'bootstrap/modal'], func
     var that = this;
 
     params = $.extend({}, {
+      version: 3,
       closeButton: true,
       saveButton: false,
       templateName: 'CMS/'+params.name+'-edit-form.html',
@@ -41,7 +42,7 @@ define(['knockout', 'modules/templateEngine', 'jquery', 'bootstrap/modal'], func
     }
 
     var modalHTML = templateEngine.render(
-      'webforge/bootache/modal.html', 
+      params.version === '2.3' ? 'webforge/bootache/modalv2.3.html' : 'webforge/bootache/modal.html',
       {
         id: params.name+'-edit',
         label: i18n.modal.label,

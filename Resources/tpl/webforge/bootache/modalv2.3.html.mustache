@@ -1,0 +1,10 @@
+<div {{#withBinding}}data-bind="with: {{withBinding}}" {{/withBinding}}class="modal hide fade" id="{{id}}-modal" tabindex="-1" role="dialog" aria-labelledby="{{id}}-modal-label" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title" id="{{id}}-modal-label">{{label}}{{{subLabel}}}</h4>
+   </div>
+   <div class="modal-body">{{{body}}}</div>
+   <div class="modal-footer">
+      {{{buttons}}}
+   </div>
+</div>
