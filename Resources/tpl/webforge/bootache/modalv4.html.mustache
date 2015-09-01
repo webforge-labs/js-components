@@ -1,0 +1,17 @@
+<div {{#withBinding}}data-bind="with: {{withBinding}}" {{/withBinding}}class="modal fade" id="{{id}}-modal">
+  <div class="modal-dialog {{#size}}modal-{{size}}{{/size}}">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title" id="{{id}}-modal-label">{{label}}{{{subLabel}}}</h4>
+      </div>
+      <div class="modal-body">{{{body}}}</div>
+      <div class="modal-footer">
+        {{{buttons}}}
+      </div>
+    </div>
+  </div>
+</div>

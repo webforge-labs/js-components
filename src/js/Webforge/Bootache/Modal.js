@@ -42,7 +42,7 @@ define(['knockout', 'modules/templateEngine', 'jquery', 'bootstrap/modal'], func
     }
 
     var modalHTML = templateEngine.render(
-      params.version === '2.3' ? 'webforge/bootache/modalv2.3.html' : 'webforge/bootache/modal.html',
+      params.version === 3 ? 'webforge/bootache/modal.html' : 'webforge/bootache/modalv'.params.version.'.html',
       {
         id: params.name+'-edit',
         label: i18n.modal.label,
