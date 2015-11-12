@@ -21,6 +21,7 @@ define(['jquery', 'i18next', 'lodash'], function ($, i18n, _) {
       fallbackLng: 'en',
       fallbackNS: 'messages',
       keyseparator: '.',
+      nsseparator: ':',
       interpolationPrefix: '%',
       interpolationSuffix: '%'
     };
@@ -38,6 +39,10 @@ define(['jquery', 'i18next', 'lodash'], function ($, i18n, _) {
     };
 
     this.trans = function (key, params, domain) {
+      if (domain) {
+        key = domain+':'+key;
+      }
+      
       if (params) {
         return i18n.t(key, params);
       } else {
