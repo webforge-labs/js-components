@@ -29,6 +29,7 @@
     "load-grunt-config": "~0.16.0",
     "grunt-shimney-sweeper": "~1.2.5"
   },
+  "main": "index.js",
   "scripts": {
     "test": "grunt test"
   }
